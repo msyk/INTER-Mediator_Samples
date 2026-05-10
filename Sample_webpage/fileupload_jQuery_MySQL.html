@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <!-- Loading JQuery UI FileUpload -->
-    <link rel="stylesheet" href="../vendor/inter-mediator/inter-mediator/node_modules/blueimp-file-upload/css/jquery.fileupload.css">
     <script src="../vendor/inter-mediator/inter-mediator/node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
     <script src="../vendor/inter-mediator/inter-mediator/node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
 
@@ -43,7 +42,8 @@
 
     <!-- Loading INTER-Mediator -->
     <!--    <script type="text/javascript" src="Calc_Lookup_MySQL.yaml"></script>-->
-    <script type="text/javascript" src="../../vendor/inter-mediator/inter-mediator/index.php"></script>
+    <script type="text/javascript" src="../vendor/inter-mediator/inter-mediator/index.php"></script>
+    <link rel="stylesheet" href="../vendor/inter-mediator/inter-mediator/node_modules/blueimp-file-upload/css/jquery.fileupload.css">
     <script src="../vendor/inter-mediator/inter-mediator/node_modules/inter-mediator-plugin-jqueryfileupload/index.js"></script>
     <script>
       INTERMediatorOnPage.doBeforeConstruct = function () {
@@ -52,6 +52,8 @@
         INTERMediatorOnPage.buttonClassInsert = "btn btn-info"
         INTERMediatorOnPage.buttonClassMaster = "btn btn-info"
         INTERMediatorOnPage.buttonClassBackNavi = "btn btn-info"
+
+        IMParts_Catalog.jquery_fileupload.submitAfterSelect = true
       }
     </script>
     <style>
@@ -108,9 +110,9 @@
                 <td data-im="testtable@vc1" data-im-widget="jquery_fileupload"></td>
                 <!--                <td><img src="Calc_Lookup_MySQL.yaml?media=" data-im="testtable@vc1@#src" style="width: 60px"></td>-->
                 <td>
-                    <img src="../../vendor/inter-mediator/inter-mediator/index.php?deffile=./vendor/inter-mediator/inter-mediator/samples/Sample_webpage/fileupload_jQuery_MySQL.yml&media="
+                    <img src="../vendor/inter-mediator/inter-mediator/index.php?deffile=./vendor/inter-mediator/inter-mediator/samples/Sample_webpage/fileupload_jQuery_MySQL.yml&media="
                          data-im="testtable@vc1@#src" style="width: 60px">
-                    [<img src="../../vendor/inter-mediator/inter-mediator/index.php?deffile=./samples/Sample_webpage/fileupload_jQuery_MySQL.yml&media="
+                    [<img src="../vendor/inter-mediator/inter-mediator/index.php?deffile=./samples/Sample_webpage/fileupload_jQuery_MySQL.yml&media="
                          data-im="testtable@vc1@#src" style="width: 60px">]
                 </td>
                 <td>

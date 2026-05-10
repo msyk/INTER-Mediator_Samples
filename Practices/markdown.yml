@@ -1,0 +1,11 @@
+contexts:
+  - name: testtable
+    table: testtable
+    view: testtable
+    records: 10000
+    key: id
+options:
+  credit-including: footer
+connection:
+  db-class: PDO
+-debug: false

@@ -23,11 +23,7 @@ class DBAccess
         $seed = '234578ABDEFGHJLMNPRTUYadefghprty';
         $password = '';
         for ($i = 0; $i < 6; $i++) {
-            try {
-                $n = random_int(0, strlen($seed) - 1);
-            } catch (\Exception $ex) {
-                $n = rand(0, strlen($seed) - 1);
-            }
+            $n = random_int(0, strlen($seed) - 1);
             $password .= substr($seed, $n, 1);
         }
         return $password;
@@ -36,17 +32,17 @@ class DBAccess
     public function getTargetUserId(string $password): ?string
     {
         $dSource = [
-            [
-                "name" => "authuser",
-                "key" => "id",
-                "records" => 1,
-                'send-mail' => ['read' => ['template-context' => 'mailtemplate@id=992',],],
-            ],
-            [
-                "name" => "mailtemplate",
-                "key" => "id",
-                "records" => 1,
-            ],
+                [
+                        "name" => "authuser",
+                        "key" => "id",
+                        "records" => 1,
+                        'send-mail' => ['read' => ['template-context' => 'mailtemplate@id=992',],],
+                ],
+                [
+                        "name" => "mailtemplate",
+                        "key" => "id",
+                        "records" => 1,
+                ],
         ];
         $proxy = $this->getExtProxy();
         $this->dbInit($dSource, [], ["db-class" => "PDO"], 2);

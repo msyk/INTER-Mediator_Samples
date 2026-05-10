@@ -9,12 +9,12 @@
  * https://github.com/INTER-Mediator/INTER-Mediator/blob/master/dist-docs/License.txt
  */
 
-use INTERMediator\DB\Extending\AfterCreate;
+use INTERMediator\DB\Extending\AfterImport;
 use INTERMediator\DB\Extending\BeforeCreate;
 use INTERMediator\DB\UseSharedObjects;
 use INTERMediator\DB\Proxy_ExtSupport;
 
-class EnrollStart extends UseSharedObjects implements BeforeCreate, AfterCreate
+class EnrollStart extends UseSharedObjects implements BeforeCreate, AfterImport
 {
     use Proxy_ExtSupport;
 

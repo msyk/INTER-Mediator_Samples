@@ -8,6 +8,7 @@ contexts:
     file-upload:
       - field: vc1
         context: fileupload
+        file-name: test@@id@@(@@dt1@@)
 #        container: FileURL
     repeat-control: 'insert delete'
     default-values:

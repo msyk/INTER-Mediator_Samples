@@ -1,6 +1,6 @@
 <?php
 
-use INTERMediator\DB\Extending\AfterCreate;
+use INTERMediator\DB\Extending\AfterImport;
 
 /**
  * INTER-Mediator
@@ -16,7 +16,7 @@ use INTERMediator\DB\Extending\AfterCreate;
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-class MailSending implements AfterCreate
+class MailSending implements AfterImport
 {
     public function doAfterCreateToDB($result)
     {

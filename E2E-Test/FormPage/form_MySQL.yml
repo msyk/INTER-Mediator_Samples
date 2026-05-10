@@ -20,7 +20,7 @@ contexts:
         join-field: id
         operator: '='
     sync-control: create update delete
-    repeat-control: insert-confirm delete-confirm copy
+    repeat-control: insert delete copy
     default-values:
       - field: datetime
         value: '2012-01-01 00:00:00'

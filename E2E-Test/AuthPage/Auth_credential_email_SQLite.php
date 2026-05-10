@@ -40,7 +40,7 @@ IM_Entry(
     [
 //        "media-root-dir" => "/tmp",
         "authentication" => [
-            "authexpired" => "10",
+            "authexpired" => "20",
             "storing" => "credential",
             "email-as-username" => true,
         ],

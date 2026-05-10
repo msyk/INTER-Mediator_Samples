@@ -37,7 +37,7 @@ IM_Entry(
     [
 //        "media-root-dir" => "/tmp",
         "authentication" => [
-            "authexpired" => "10",
+            "authexpired" => "20",
             "storing" => "credential",
             "user" => ["user1"],
             "group" => ["group2"],
