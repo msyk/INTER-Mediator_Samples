@@ -412,6 +412,24 @@ CREATE INDEX issuedhash_clienthost
 CREATE INDEX issuedhash_user_id_clienthost
     ON issuedhash (user_id, clienthost);
 
+# Collecting failed login information.
+CREATE TABLE authfail
+(
+    id       INT AUTO_INCREMENT,
+    dt       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ip       VARCHAR(39),
+    username VARCHAR(64),
+    tw       INT,
+    PRIMARY KEY (id)
+) CHARACTER SET utf8mb4,
+  COLLATE utf8mb4_unicode_ci
+  ENGINE = InnoDB;
+
+CREATE INDEX authfail_dt ON authfail (dt);
+CREATE INDEX authfail_ip ON authfail (ip);
+CREATE INDEX authfail_tw ON authfail (tw);
+CREATE INDEX authfail_username ON authfail (username);
+
 # Mail Template
 
 CREATE TABLE mailtemplate
