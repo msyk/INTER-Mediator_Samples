@@ -42,8 +42,8 @@
     "allow-plugins": {
       "simplesamlphp/composer-module-installer": true,
       "simplesamlphp/composer-xmlprovider-installer": true,
-      "mouf/nodejs-installer": true,
-      "inter-mediator/inter-mediator": true
+      "inter-mediator/inter-mediator": true,
+      "mouf/nodejs-installer": true
     }
   }
 }
