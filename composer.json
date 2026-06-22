@@ -32,10 +32,10 @@
       "The software test is very important activity for the quality assuarance."
     ],
     "clear": [
-      "rm -rf vendor"
+      "INTERMediator\\Composer\\InstallerPlugin::onClear"
     ],
     "clean": [
-      "rm -rf vendor"
+      "INTERMediator\\Composer\\InstallerPlugin::onClear"
     ]
   },
   "config": {
@@ -43,7 +43,6 @@
       "simplesamlphp/composer-module-installer": true,
       "simplesamlphp/composer-xmlprovider-installer": true,
       "inter-mediator/inter-mediator": true,
-      "mouf/nodejs-installer": true
     }
   }
 }
