@@ -32,10 +32,10 @@
       "The software test is very important activity for the quality assuarance."
     ],
     "clear": [
-      "INTERMediator\\Composer\\InstallerPlugin::onClear"
+      "rm -rf vendor"
     ],
     "clean": [
-      "INTERMediator\\Composer\\InstallerPlugin::onClear"
+      "rm -rf vendor"
     ]
   },
   "config": {
