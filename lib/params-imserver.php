@@ -37,7 +37,7 @@ $dbOption = array();
  *  $webServerName = array('www.inter-mediator.com');
  *  $webServerName = array('inter-mediator.com', 'example.jp');
  */
-//$webServerName = array('demo.inter-mediator.com');
+$webServerName = array('demo.inter-mediator.com');
 
 /* Customize the X-Frame-Options header
  *
@@ -144,12 +144,12 @@ $suppressDefaultValuesOnCopy = true; // If you don't want to set default values 
 $notUseServiceServer = false;  // Default is FALSE!. If it sets to true, every feature with Service Server don't work.
 $activateClientService = true;  // Default is TRUE!!.
 $serviceServerProtocol = "wss";  // The Service Server url components to connect from client.
-$serviceServerHost = "localhost";    // "" for public ip address.
-$serviceServerPort = "11479";
-//$serviceServerKey = "/var/www/demo_cert/privkey.pem";  // Path of Key file for wss protocol **** wss protocol doesn't work so far.
-//$serviceServerCert = "/var/www/demo_cert/cert.pem"; // Path of Cert file for wss protocol
-//$serviceServerCA = "/var/www/demo_cert/chain.pem"; // Path of CA file for wss protocol
-$serviceServerConnect = "http://localhost"; // The Service Server host name to connect from the INTER-Mediator server
+$serviceServerHost = "demo.inter-mediator.com";    // "" for public ip address.
+$serviceServerPort = "11478";
+$serviceServerKey = "/var/www/demo_cert/privkey.pem";  // Path of Key file for wss protocol **** wss protocol doesn't work so far.
+$serviceServerCert = "/var/www/demo_cert/cert.pem"; // Path of Cert file for wss protocol
+$serviceServerCA = "/var/www/demo_cert/chain.pem"; // Path of CA file for wss protocol
+$serviceServerConnect = "https://demo.inter-mediator.com"; // The Service Server host name to connect from the INTER-Mediator server
 $stopSSEveryQuit = false;
 $bootWithInstalledNode = false;
 $preventSSAutoBoot = false;
