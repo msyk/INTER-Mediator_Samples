@@ -33,6 +33,7 @@ Set the new password and click "Set" button on each user.
     <thead>
     <tr>
         <th>User Name</th>
+        <th>Inactive</th>
         <th>Hashed Password</th>
         <th>Email</th>
         <th>Real Name</th>
@@ -44,6 +45,9 @@ Set the new password and click "Set" button on each user.
     <tr>
         <td>
             <input data-im="authuser@username" type="text"/>
+        </td>
+        <td>
+            <input data-im="authuser@inactive" type="checkbox" value="1"/>
         </td>
         <td>
             <input data-im="authuser@hashedpasswd" type="text"/>
@@ -59,7 +63,7 @@ Set the new password and click "Set" button on each user.
             <span data-im-control="enclosure">
                 <div data-im-control="repeater">
                 <select data-im="belonggroup@dest_group_id">
-                    <option data-im="groupname@id@value|groupname@groupname"></option>
+                    <option data-im="groupname@id@value groupname@groupname"></option>
                 </select>
                 </div>
             </span>
@@ -87,7 +91,7 @@ Set the new password and click "Set" button on each user.
             <span data-im-control="enclosure">
                 <span data-im-control="repeater">
                 <select data-im="groupingroup@dest_group_id">
-                    <option data-im="groupname@id@value|groupname@groupname"></option>
+                    <option data-im="groupname@id@value groupname@groupname"></option>
                 </select>
                 </span>
             </span>
