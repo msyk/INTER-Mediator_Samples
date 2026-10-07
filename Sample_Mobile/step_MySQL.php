@@ -13,7 +13,7 @@ IM_Entry(
             'records' => 10000,
             'maxrecords' => 10000,
             'key' => 'pref_id',
-            'navi-control' => 'step-nonavi',
+            'navi-control' => 'step',
             'before-move-nextstep'=>'doAfterPrefSelection',
             'appending-data'=>array(
                 array('pref_id'=>101, 'pref'=>'埼玉県'),
