@@ -100,9 +100,6 @@ IM_Entry(
         'db-class' => 'FileMaker_DataAPI',
         'port' => '443',
         'protocol' => 'https',
-//        'external-db' => array(
-//            'issuedhash' => 'sqlite:/var/db/im/sample.sq3',
-//        ),
     ),
     false
 );

@@ -29,7 +29,7 @@ class DBAccess
         return $password;
     }
 
-    public function getTargetUserId(string $password): ?string
+    public function getTargetUserId(string $password): string|null
     {
         $dSource = [
                 [

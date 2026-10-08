@@ -265,7 +265,6 @@ IM_Entry(
         'port' => 'string',
         'protocol' => 'string',
         'datatype' => 'string',
-        'external-db' => array('#' => 'string'),
     ),
     //todo ## Set the debug level to false, 1 or 2.
     false

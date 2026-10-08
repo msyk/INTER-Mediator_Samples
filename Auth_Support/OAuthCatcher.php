@@ -24,14 +24,14 @@ require_once("{$pathToIM}/INTER-Mediator.php"); // Loading INTER-Mediator and re
 
 use INTERMediator\Auth\OAuthAuth;
 
-$authObj = new OAuthAuth($_GET["state"]);
+$authObj = new OAuthAuth($_GET["state"] ?? "");
 //$authObj->debugMode = true; // or comment here
 //$authObj->setDoRedirect(true);
 $jsCode = "";
 if (!$authObj->isActive) {
+    header("Content-Type: text/html; charset=UTF-8");
     echo "Missing parameters for OAuth authentication. "
-        . ($_GET['error_description'] ?? "")
-        . $authObj->errorMessages();
+        . htmlspecialchars(($_GET['error_description'] ?? "") . $authObj->errorMessages(), ENT_QUOTES, 'UTF-8');
     exit;
 }
 $err = "No Error";
@@ -56,8 +56,8 @@ header("Content-Type: text/html; charset=UTF-8");
     <script type="text/javascript"><?php echo $jsCode; ?></script>
 </head>
 <body>
-Provider: <?php echo $authObj->oAuthProvider(); ?><br>
-Status: <?php echo $err; ?>
+Provider: <?php echo htmlspecialchars($authObj->oAuthProvider(), ENT_QUOTES, 'UTF-8'); ?><br>
+Status: <?php echo htmlspecialchars($err, ENT_QUOTES, 'UTF-8'); ?>
 <hr/>
 <p>Any other messages...</p>
 </body>
