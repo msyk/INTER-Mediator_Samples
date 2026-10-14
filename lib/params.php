@@ -153,7 +153,22 @@ $serviceServerConnect = "http://localhost"; // The Service Server host name to c
 $stopSSEveryQuit = false;
 $bootWithInstalledNode = false;
 $preventSSAutoBoot = false;
-$foreverLog = '/tmp/forever.log';
+$foreverLog = '/var/www/files/forever.log';
+
+/* Media File Support
+ * =================== */
+$mediaRootDir = "/var/www/files"; // Supposed to macOS
+//$cacheMediaAccess = false;
+$allowedMediaFileRootDirs = [$mediaRootDir, ]; // Just for file:/// (File URL) media file path.
+//$uploadAllowedExtensions = [];
+/* The variable $uploadAllowedExtensions restricts file uploads to the specified file extensions only.
+　　If this variable is set to NULL, file uploads are permitted. Note that files with certain extensions
+　　are always rejected, regardless of this setting.*/
+//$mediaClassAllowed= ['INTERMediator\\DB\\Export'];
+/* If this variable is not set, classes outside the INTERMediator namespace and the INTERMediator\DB\Export
+   class are permitted. If it is set, only the listed classes are permitted, so include 'INTERMediator\DB\Export'
+   explicitly if you need it. */
+
 
 /* Operation Log
  * ===================
