@@ -18,7 +18,7 @@ use INTERMediator\DB\Extending\AfterRead;
 
 class SumForCustomers implements AfterRead
 {
-    public function doAfterReadFromDB($result)
+    public function doAfterReadFromDB($result): ?array
     {
         $sum = array();
         foreach ($result as $record) {

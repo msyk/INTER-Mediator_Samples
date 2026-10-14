@@ -10,23 +10,23 @@ use INTERMediator\DB\UseSharedObjects;
 class ImportingSupport extends UseSharedObjects implements BeforeImport, BeforeCreate, AfterImport, AfterCreate
 {
 
-    public function doBeforeImportToDB()
+    public function doBeforeImportToDB(): mixed
     {
         Logger::getInstance()->setDebugMessage("Calling ImportingSupport::doBeforeImportToDB");
     }
 
-    public function doBeforeCreateToDB()
+    public function doBeforeCreateToDB(): mixed
     {
         Logger::getInstance()->setDebugMessage("Calling ImportingSupport::doBeforeCreateToDB");
     }
 
-    public function doAfterCreateToDB($result)
+    public function doAfterCreateToDB($result): ?array
     {
         Logger::getInstance()->setDebugMessage("Calling ImportingSupport::doAfterCreateToDB:" . var_export($result, true));
         return $result;
     }
 
-    public function doAfterImportToDB($result)
+    public function doAfterImportToDB($result): ?array
     {
         Logger::getInstance()->setDebugMessage("Calling ImportingSupport::doAfterImportToDB:" . var_export($result, true));
         return $result;

@@ -6,7 +6,7 @@ use INTERMediator\DB\UseSharedObjects;
 
 class MorePostalCode extends UseSharedObjects implements AfterRead
 {
-    public function doAfterReadFromDB($result)
+    public function doAfterReadFromDB($result): ?array
     {
         return $result;
     }

@@ -14,7 +14,8 @@ contexts:
     name: productdetail
     view: product
     key: id
-options: { }
+options:
+  media-class-allowed: [ 'PDFSample','ExportSample' ]
 connection:
   db-class: PDO
 debug: false

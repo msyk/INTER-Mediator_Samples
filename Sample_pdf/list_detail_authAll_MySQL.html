@@ -21,7 +21,7 @@
 <!-- Table for the list view -->
 <a href="javascript:IMLibAuthentication.logout()">ログアウト</a>
 <div id="listarea">
-    <table border="1">
+    <table>
         <thead>
         <tr>
             <th>PDF</th><th>name</th><th>unitprice</th><th>photo</th>
@@ -37,7 +37,7 @@
             <td class="price" data-im="productlist@unitprice"></td>
             <td>
                 <img width="30" src="../Sample_products/images/" data-im="productlist@photofile@#src">
-                <a data-im="productlist@ack_link@href|productlist@acknowledgement"></a>
+                <a data-im="productlist@ack_link@href productlist@acknowledgement"></a>
             </td>
         </tr>
         </tbody>

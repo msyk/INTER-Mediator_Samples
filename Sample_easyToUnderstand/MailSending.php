@@ -22,4 +22,9 @@ class MailSending implements AfterImport
     {
         return $result;
     }
+
+    public function doAfterImportToDB($result): ?array
+    {
+        // TODO: Implement doAfterImportToDB() method.
+    }
 }

@@ -18,7 +18,7 @@ use INTERMediator\DB\Extending\AfterRead;
 
 class YearMonthGen implements AfterRead
 {
-    public function doAfterReadFromDB($result)
+    public function doAfterReadFromDB($result): ?array
     {
         $result = array();
         $year = 2010;

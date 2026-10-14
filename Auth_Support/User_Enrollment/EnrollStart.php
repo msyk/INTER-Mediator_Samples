@@ -18,7 +18,7 @@ class EnrollStart extends UseSharedObjects implements BeforeCreate, AfterImport
 {
     use Proxy_ExtSupport;
 
-    public function doBeforeCreateToDB()
+    public function doBeforeCreateToDB(): mixed
     {
         $currentDT = time() + 3600;
         $currentDTFormat = date('YmdHis', $currentDT);
@@ -39,6 +39,11 @@ class EnrollStart extends UseSharedObjects implements BeforeCreate, AfterImport
             $hash = $this->proxyObject->userEnrollmentStart($result[0]["id"]);
             $result[0]['hash'] = $hash;
         }
+        return $result;
+    }
+
+    public function doAfterImportToDB($result): ?array
+    {
         return $result;
     }
 }

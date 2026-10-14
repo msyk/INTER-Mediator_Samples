@@ -7,7 +7,7 @@ use PragmaRX\Google2FA\Google2FA;
 
 class RegisterAddURL extends UseSharedObjects implements AfterRead
 {
-    public function doAfterReadFromDB($result)
+    public function doAfterReadFromDB($result): ?array
     {
         $qrCodeUrl = '';
         $secret = $result[0]['secret'] ?? '';

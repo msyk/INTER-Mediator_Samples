@@ -33,6 +33,7 @@ IM_Entry(
         ),
     ),
     array(
+        'media-class-allowed' => ['PDFSample','ExportSample'],
         'formatter' => array(
             array('field' => 'product@unitprice', 'converter-class' => 'Number', 'parameter' => '0'),
         ),

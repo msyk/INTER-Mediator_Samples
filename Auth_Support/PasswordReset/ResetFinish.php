@@ -14,7 +14,7 @@ use INTERMediator\DB\UseSharedObjects;
 
 class ResetFinish extends UseSharedObjects implements BeforeRead
 {
-    public function doBeforeReadFromDB()
+    public function doBeforeReadFromDB(): mixed
     {
         $dataFromClient = $this->dbSettings->getExtraCriteria();
         $email = $dataFromClient[0]['value'];

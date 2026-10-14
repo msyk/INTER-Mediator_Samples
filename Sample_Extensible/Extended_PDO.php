@@ -19,7 +19,7 @@ use DateTime;
 
 class Extended_PDO extends PDO
 {
-    public function readFromDB():?array
+    public function readFromDB(): ?array
     {
         $result = parent::readFromDB();
         $dataSourceName = $this->dbSettings->getDataSourceName();
@@ -36,8 +36,7 @@ class Extended_PDO extends PDO
                     'enddt' => $endDate->format('Y-m-d H:i:s'),
                 );
             }
-        }
-        else if ($dataSourceName === 'summary1') {
+        } else if ($dataSourceName === 'summary1') {
             $sum = array();
             foreach ($result as $record) {
                 if (!isset($sum[$record['item']])) {
@@ -49,15 +48,14 @@ class Extended_PDO extends PDO
             arsort($sum);
             $result = array();
             $counter = 10;
-            foreach ( $sum as $product => $totalprice ) {
-                $result[] = array('itemname'=>$product, 'totalprice'=>$totalprice);
+            foreach ($sum as $product => $totalprice) {
+                $result[] = array('itemname' => $product, 'totalprice' => $totalprice);
                 $counter--;
-                if ( $counter <= 0 ) {
+                if ($counter <= 0) {
                     break;
                 }
             }
-        }
-        else if ($dataSourceName === 'summary2') {
+        } else if ($dataSourceName === 'summary2') {
             $sum = array();
             foreach ($result as $record) {
                 if (!isset($sum[$record['customer']])) {
@@ -69,10 +67,10 @@ class Extended_PDO extends PDO
             arsort($sum);
             $result = array();
             $counter = 10;
-            foreach ( $sum as $customer => $totalprice ) {
-                $result[] = array('customername'=>$customer, 'totalprice'=>$totalprice);
+            foreach ($sum as $customer => $totalprice) {
+                $result[] = array('customername' => $customer, 'totalprice' => $totalprice);
                 $counter--;
-                if ( $counter <= 0 ) {
+                if ($counter <= 0) {
                     break;
                 }
             }
